@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppointMed</string>
+    <string name="expediente">Expediente</string>
+    <string name="citas">Citas</string>
+    <string name="historial">Historial</string>
+    <string name="ayuda">Ayuda</string>
 </resources>
