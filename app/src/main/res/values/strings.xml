@@ -5,4 +5,11 @@
     <string name="historial">Historial</string>
     <string name="ayuda">Ayuda</string>
     <string name="option">Opciones</string>
+    <string name="expNombre">Nombre:</string>
+    <string name="expDir">Direccion:</string>
+    <string name="expTel">Telefono:</string>
+    <string name="expCelular">Celular:</string>
+    <string name="expTipoSangre">Tipo de sangre:</string>
+    <string name="expAlergias">Alergias:</string>
+    <string name="expContacto">Contacto de emergencia:</string>
 </resources>
