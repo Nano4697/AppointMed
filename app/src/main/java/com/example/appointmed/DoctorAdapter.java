@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 
+
 public class DoctorAdapter extends ArrayAdapter {
 
     ArrayList<Object> list;
@@ -43,17 +44,12 @@ public class DoctorAdapter extends ArrayAdapter {
         if (view == null)
             view = inflater.inflate(R.layout.layout_doctor_list, null);
 
-
         TextView doc = (TextView) view.findViewById(R.id.doctorCita);
         TextView dept = (TextView) view.findViewById(R.id.deptCita);
         ImageView img = (ImageView) view.findViewById(R.id.thumbnail_image);
 
         if (doc!=null)
-        {
             doc.setText(getItem(i).toString());
-
-
-        }
         if (dept!=null)
             dept.setText(getItem(i).toString());
         if (img!=null)
