@@ -12,4 +12,10 @@
     <string name="expTipoSangre">Tipo de sangre:</string>
     <string name="expAlergias">Alergias:</string>
     <string name="expContacto">Contacto de emergencia:</string>
+    <string name="fechaHistorial">Fecha</string>
+    <string name="tipoRegistroHistorial">Tipo de registro</string>
+    <string name="descripHistorial">Descripcion</string>
+    <string name="medicoHistorial">Medico a cargo</string>
+    <string name="hospitalCita">Centro medico</string>
+    <string name="select">Seleccionar</string>
 </resources>
