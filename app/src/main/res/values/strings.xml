@@ -18,4 +18,6 @@
     <string name="medicoHistorial">Medico a cargo</string>
     <string name="hospitalCita">Centro medico</string>
     <string name="select">Seleccionar</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="signup">Registrarse</string>
 </resources>

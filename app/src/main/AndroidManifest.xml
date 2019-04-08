@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppointMed">
-        <activity android:name=".citasDoctor"></activity>
-        <activity android:name=".citasHospital" />
-        <activity android:name=".HistorialMed" />
+        <activity android:name=".Signup"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,14 +17,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Login" />
+        <activity android:name=".citasDoctor" />
+        <activity android:name=".citasHospital" />
+        <activity android:name=".HistorialMed" />
+        <activity android:name=".MainMenu"></activity>
         <activity
             android:name=".Expediente"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainMenu">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value=".MainMenu" />
         </activity>
     </application>
 

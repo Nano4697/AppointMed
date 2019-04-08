@@ -6,12 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class citasHospital extends AppCompatActivity {
+public class Login extends AppCompatActivity {
 
-    View.OnClickListener SelectHandler = new View.OnClickListener() {
+    View.OnClickListener loginHandler = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getBaseContext(), citasDoctor.class);
+            Intent intent = new Intent(getBaseContext(), MainMenu.class);
             startActivity(intent);
         }
     };
@@ -19,10 +19,10 @@ public class citasHospital extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_citas_hospital);
+        setContentView(R.layout.activity_login);
 
-        Button btnSelect = findViewById(R.id.btnSelectHospital);
+        Button btnLogin = findViewById(R.id.btnLogin);
 
-        btnSelect.setOnClickListener(SelectHandler);
+        btnLogin.setOnClickListener(loginHandler);
     }
 }
