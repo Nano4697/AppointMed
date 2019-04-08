@@ -22,7 +22,14 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         Button btnLogin = findViewById(R.id.btnLogin);
+        View btnBack = findViewById(R.id.btnBackLogin);
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         btnLogin.setOnClickListener(loginHandler);
     }
 }
