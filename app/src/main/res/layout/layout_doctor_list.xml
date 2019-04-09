@@ -26,12 +26,12 @@
             app:srcCompat="@drawable/person" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="231dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:gravity="center_vertical"
-            android:orientation="vertical"
-            android:maxWidth="128dp">
+            android:maxWidth="128dp"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/doctorCita"
@@ -50,16 +50,6 @@
 
 
         </LinearLayout>
-
-        <Button
-            android:id="@+id/btnSelectDoctor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|center_horizontal"
-            android:layout_marginEnd="5dp"
-            android:minWidth="104dp"
-            android:text="@string/select"
-            android:textSize="12sp" />
 
     </LinearLayout>
 </RelativeLayout>

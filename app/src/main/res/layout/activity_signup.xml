@@ -8,7 +8,7 @@
     tools:layout_editor_absoluteY="25dp">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
@@ -20,37 +20,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edtCedula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Cédula"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toStartOf="@+id/edtNombre"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edtCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Correo Electrónico"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintStart_toStartOf="@+id/edtCedula"
+        app:layout_constraintTop_toBottomOf="@+id/edtCedula" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Contraseña"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintStart_toStartOf="@+id/edtCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreo" />
 
     <Button
         android:id="@+id/btnSingup"
@@ -65,7 +65,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
         app:layout_constraintVertical_bias="0.745" />
 
     <ImageView

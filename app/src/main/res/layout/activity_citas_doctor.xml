@@ -15,7 +15,7 @@
         android:layout_height="60dp"/>
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/edtFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -27,13 +27,13 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbarAlt" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spnHora"
         android:layout_width="238dp"
         android:layout_height="35dp"
         android:layout_marginTop="24dp"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="@+id/editText7"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintStart_toStartOf="@+id/edtFecha"
+        app:layout_constraintTop_toBottomOf="@+id/edtFecha" />
 
     <View
         android:id="@+id/divider"
@@ -47,7 +47,7 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/spnHora" />
 
     <EditText
         android:id="@+id/editText8"
@@ -57,7 +57,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        app:layout_constraintStart_toStartOf="@+id/spinner2"
+        app:layout_constraintStart_toStartOf="@+id/spnHora"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <Button
@@ -81,7 +81,8 @@
         android:dividerHeight="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8"></ListView>
+        app:layout_constraintTop_toBottomOf="@+id/editText8">
+    </ListView>
 
     <Button
         android:id="@+id/btnSelectDoctor"
@@ -91,8 +92,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:background="@color/colorPrimary"
+        android:clickable="true"
         android:text="@string/select"
         android:textColor="@color/colorText"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/doctorCitaList"

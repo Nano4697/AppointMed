@@ -1,14 +1,14 @@
-package com.example.appointmed;
+package com.example.appointmed.Controlador;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
+import com.example.appointmed.Modelo.Doctor;
+import com.example.appointmed.R;
 
 import java.util.ArrayList;
 
@@ -17,8 +17,6 @@ import java.util.ArrayList;
 public class DoctorAdapter extends ArrayAdapter {
 
     ArrayList<Object> list;
-    private static final int HEADER = 0;
-    private static final int ITEM = 1;
     private LayoutInflater inflater;
 
     Context ctx;
@@ -30,31 +28,21 @@ public class DoctorAdapter extends ArrayAdapter {
         ctx = context;
     }
 
-//    @Override
-//    public int getItemViewType(int position) {
-//        if (list.get(position) instanceof Group_letter)
-//            return HEADER;
-//        else
-//            return ITEM;
-//    }
-
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
         if (view == null)
             view = inflater.inflate(R.layout.layout_doctor_list, null);
 
-        TextView doc = (TextView) view.findViewById(R.id.doctorCita);
-        TextView dept = (TextView) view.findViewById(R.id.deptCita);
-        ImageView img = (ImageView) view.findViewById(R.id.thumbnail_image);
+        TextView doc = view.findViewById(R.id.doctorCita);
+        TextView dept = view.findViewById(R.id.deptCita);
+
+        Doctor doctor = (Doctor) getItem(i);
 
         if (doc!=null)
-            doc.setText(getItem(i).toString());
+            doc.setText(doctor.getNomnbre());
         if (dept!=null)
-            dept.setText(getItem(i).toString());
-        if (img!=null)
-            Glide.with(getContext()).load(getItem(i).toString()).into(img);
-
+            dept.setText(doctor.getEspecialidad());
 
         return view;
     }

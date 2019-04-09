@@ -36,6 +36,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="120dp"
         android:background="#2D527C"
+        android:onClick="verificar"
         android:text="@string/login"
         android:textColor="#FFFFFF"
         android:textStyle="bold"

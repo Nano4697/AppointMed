@@ -9,10 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ShareActionProvider;
-import android.widget.Toast;
-
-import java.util.prefs.Preferences;
 
 public class MainMenu extends AppCompatActivity {
     String strCedula;
@@ -33,6 +29,7 @@ public class MainMenu extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getBaseContext(), citasHospital.class);
+            intent.putExtra(extramassage,strCedula);
             startActivity(intent);
 
         }

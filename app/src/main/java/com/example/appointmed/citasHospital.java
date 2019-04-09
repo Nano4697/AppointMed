@@ -6,14 +6,11 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.appointmed.Modelo.Hospital;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,11 +23,19 @@ import java.util.ArrayList;
 public class citasHospital extends AppCompatActivity {
     Spinner spHopitales;
     String strCedula;
+    public static final String msgCedula = "com.example.appointmed.CEDULA";
+    public static final String msgHospital = "com.example.appointmed.HOSPITAL";
+
     DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Hopitales");
     View.OnClickListener SelectHandler = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getBaseContext(), citasDoctor.class);
+
+            String hospital = (String) spHopitales.getSelectedItem();
+
+            intent.putExtra(msgCedula,strCedula);
+            intent.putExtra(msgHospital,hospital);
             startActivity(intent);
         }
     };
@@ -45,9 +50,9 @@ public class citasHospital extends AppCompatActivity {
         Button btnSelect = findViewById(R.id.btnSelectHospital);
 
         btnSelect.setOnClickListener(SelectHandler);
-        spHopitales= (Spinner) findViewById(R.id.spnHospital);
+        spHopitales= findViewById(R.id.spnHospital);
         // Find the toolbar view inside the activity layout
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarAlt);
+        Toolbar toolbar = findViewById(R.id.toolbarAlt);
         TextView title = findViewById(R.id.toolbar_title);
         title.setText(R.string.citas);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
