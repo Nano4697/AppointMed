@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class citasDoctor extends AppCompatActivity {
 
@@ -29,6 +30,8 @@ public class citasDoctor extends AppCompatActivity {
 
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarAlt);
+        TextView title = findViewById(R.id.toolbar_title);
+        title.setText(R.string.citas);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);

@@ -1,19 +1,30 @@
 package com.example.appointmed;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ShareActionProvider;
+import android.widget.Toast;
+
+import java.util.prefs.Preferences;
 
 public class MainMenu extends AppCompatActivity {
+    String strCedula;
+    SharedPreferences preferences;
 
+    public static final String extramassage = "com.example.appointmed.MESSAGE";
     View.OnClickListener expedienteHandler = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getBaseContext(), Expediente.class);
+            intent.putExtra(extramassage,strCedula);
+
             startActivity(intent);
         }
     };
@@ -31,6 +42,7 @@ public class MainMenu extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(getBaseContext(), HistorialMed.class);
+            intent.putExtra(extramassage,strCedula);
             startActivity(intent);
 
         }
@@ -44,13 +56,34 @@ public class MainMenu extends AppCompatActivity {
 
         }
     };
+    @Override
+    protected void onPause(){
+        super.onPause();
+        SharedPreferences settings = getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.clear();
+        editor.putString("Cedula",strCedula);
+        editor.commit();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        preferences = getPreferences(Context.MODE_PRIVATE);
+        String cedula = preferences.getString("Cedula","");
+        if(!cedula.equals("")){
+            strCedula=cedula;
+        }
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-
+        Intent intent = getIntent();
+        strCedula = intent.getStringExtra(Login.extramassage);
         // Find the toolbar view inside the activity layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
